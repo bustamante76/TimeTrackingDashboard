@@ -20,17 +20,18 @@ const data = async function () {
 
 // Función para actualizar los elementos hrsCurrent y hrsPrevious
 // según el periodo seleccionado (daily, weekly, monthly)
-function updateTimeframes(periodo = 'daily') {
-    data().then(data => {
-        if (data) {
-            data.forEach((item, index) => {
+async function updateTimeframes(periodo = 'daily') {
+    try {
+        const datos = await data();
+        if (datos) {
+            datos.forEach((item, index) => {
                 hrsCurrent[index].textContent = item.timeframes[periodo].current;
                 hrsPrevious[index].textContent = item.timeframes[periodo].previous;
             });
         }
-    }).catch(error => {
+    } catch (error) {
         console.error('Error al procesar los datos: ', error);
-    });
+    }
 }
 
 // Inicializar el primer elemento como activo, mediante la clase 'active'
@@ -52,3 +53,4 @@ timeFrame.forEach((element) => {
 
     });
 });
+

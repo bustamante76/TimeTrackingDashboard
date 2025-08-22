@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-Blue-300: hsl(195, 74%, 62%); /* card play */
+  --color-Green-400: hsl(145, 58%, 55%); /* card exercise */
+  --color-Navy-200: hsl(236, 100%, 87%); /* paragraph */
+  --color-Navy-900: hsl(235, 46%, 20%); /* cards */
+  --color-Navy-950: hsl(226, 43%, 10%); /* body */
+  --color-Pink-400: hsl(348, 100%, 68%); /* card study */
+  --color-Purple-500: hsl(235, 45%, 61%); /* datos hour, report*/
+  --color-Purple-600: hsl(246, 80%, 60%); /* */
+  --color-Purple-700: hsl(264, 64%, 52%); /* card social */
+  --color-Orange-300: hsl(15, 100%, 70%); /* card word */
+  --color-Yellow-300: hsl(43, 84%, 65%); /* card self care */
+  --color-White: hsl(0, 0%, 100%); /* text */
+
+  --width: 220px; /* width */
+  --height: 460px; /* height */
+  --gap: 20px; /* gap between cards */
+  --radius: 16px; /* border radius */
+  --padding: 30px; /* padding */
+  --shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* shadow */
+  --shadow-hover: 0px 10px 20px rgba(0, 0, 0, 0.2); /* shadow hover */
+  --transition: all 0.3s ease-in-out; /* transition */
+}
+
+/*  cuerpo de la pagina */
+
+body {
+  height: 100vh;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  background-color: var(--color-Navy-950);
+  color: var(--color-Navy-200);
+  display: grid;
+  place-content: center;
+}
+
+/* contenedor */
+.container {
+  max-width: 940px;
+  display: flex;
+}
+
+/*  tarjeta de usuario*/
+.card-user {
+  width: var(--width);
+  height: var(--height);
+  background-color: var(--color-Navy-900);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.info__report {
+  font-size: 0.86rem;
+  font-weight: 500;
+  padding: 40px 0 10px;
+  color: var(--color-Purple-500);
+}
+
+.info__name {
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+  font-weight: 200;
+  color: var(--color-White);
+}
+
+/*  tarjeta de usuario - top*/
+.card-user__info {
+  height: 66%;
+  padding: var(--padding);
+  text-align: left;
+  background-color: var(--color-Purple-600);
+  border-radius: var(--radius);
+}
+
+.info__image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid var(--color-White);
+  /* overflow: hidden; */
+}
+
+.image__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*  tarjeta de usuario - bottom*/
+.card-user__timeframes {
+  height: 34%;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.active {
+  color: var(--color-White);
+  font-weight: 500;
+}
+
+.timeframe {
+  width: 100px;
+}
+
+/*  */
+
+/* cards right */
+.card-datos {
+  width: calc(100% - var(--width));
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  position: relative;
+}
+
+/* cards right - items */
+.card-datos__item {
+  min-width: var(--width);
+  min-height: calc(var(--height) / 2 - var(--gap));
+  border-radius: var(--radius);
+  background-color: var(--color-Orange-300);
+  border-color: transparent;
+  outline-color: transparent;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.card-datos__item:nth-child(2) {
+  background-color: var(--color-Blue-300);
+}
+
+.card-datos__item:nth-child(3) {
+  background-color: var(--color-Pink-400);
+}
+
+.card-datos__item:nth-child(4) {
+  background-color: var(--color-Green-400);
+}
+
+.card-datos__item:nth-child(5) {
+  background-color: var(--color-Purple-700);
+}
+
+.card-datos__item:nth-child(6) {
+  background-color: var(--color-Yellow-300);
+}
+
+.figure-img {
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  left: 2px;
+  z-index: 0;
+  margin: 0; /* Remove default margin */
+}
+
+/*  card item - img.svg */
+.item__img {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  top: -10px;
+  left: 132px;
+  z-index: 0;
+}
+
+/* card item - info */
+.item-info {
+  width: var(--width);
+  height: 180px;
+  padding: 30px;
+  text-align: left;
+  border-radius: var(--radius);
+  border: none;
+  outline: none;
+  background-color: var(--color-Navy-900);
+  position: absolute;
+  top: 41px;
+}
+
+.card-datos__item:hover,
+.item-info:hover {
+  filter: brightness(1.6);
+}
+
+.info__actividad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actividad__title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-White);
+}
+
+.icon-ellipsis:hover {
+  cursor: pointer;
+  filter: brightness(1.8);
+}
+
+.info__time {
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--color-White);
+  padding: 26px 0 10px;
+}
+
+.info__previous {
+  font-size: 0.86rem;
+  font-weight: 400;
+}
+
+/* responsive css */
+
+@media (max-width: 960px) {
+  body {
+    margin: 40px auto;
+  }
+  .card-user {
+    min-width: var(--width);
+    height: calc(100% + 20px);
+    margin-bottom: 20px;
+  }
+
+  .container {
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .card-datos {
+    width: calc(2 * var(--width) + 3 * var(--gap));
+    justify-content: center;
+  }
+  .item-info {
+    width: 100%;
+    top: 32px;
+  }
+}
+
+@media (max-width: 770px) {
+  body {
+    margin-top: 50vh;
+  }
+  .container,
+  .card-datos {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-user {
+    min-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .card-user__info {
+    height: 130px;
+    padding: 0 20px;
+    display: flex;
+    justify-items: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .info__report {
+    padding: 0;
+    font-size: 0.8rem;
+  }
+  .info__name {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+  .card-user__timeframes {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    padding: 0 20px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .card-datos__item {
+    min-width: 300px;
+    min-height: 170px;
+    position: relative;
+  }
+  .figure-img {
+    left: 70px;
+  }
+  .item-info {
+    width: 100%;
+    height: 138px;
+  }
+  .actividad__title {
+    font-size: 1.2rem;
+  }
+  .info-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .info__time {
+    font-size: 2.1rem;
+    font-weight: 300;
+    padding: 10px 0;
+  }
+  .info__previous {
+    font-size: 1.1rem;
+    align-self: center;
+  }
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="./js/script.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- container left -->
+      <div class="card-user">
+        <div class="card-user__info">
+          <figure class="info__image">
+            <img
+              class="image__img"
+              src="./images/image-jeremy.png"
+              alt="Jeremy Robson"
+            />
+          </figure>
+          <div class="info-datos">
+            <p class="info__report">Report for</p>
+            <p class="info__name">Jeremy Robson</p>
+          </div>
+        </div>
+        <div class="card-user__timeframes">
+          <span class="timeframe" data-timeframe="daily">Daily</span>
+          <span class="timeframe" data-timeframe="weekly">Weekly</span>
+          <span class="timeframe" data-timeframe="monthly">Monthly</span>
+        </div>
+      </div>
+
+      <!-- container right -->
+      <div class="card-datos">
+        <!-- card Work -->
+        <div class="card-datos__item">
+          <figure class="figure-img">
+            <img
+              class="item__img"
+              src="./images/icon-work.svg"
+              alt="Work Icon"
+            />
+          </figure>
+          <div class="item-info">
+            <div class="info__actividad">
+              <h3 class="actividad__title">Work</h3>
+              <img
+                class="icon-ellipsis"
+                src="./images/icon-ellipsis.svg"
+                alt="Ellipsis Icon"
+              />
+            </div>
+            <div class="info-date">
+              <p class="info__time"><span class="hrs-current">32</span>hrs</p>
+              <p class="info__previous">
+                Last Week - <span class="hrs-previus">36</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card Play -->
+        <div class="card-datos__item">
+          <figure class="figure-img">
+            <img
+              class="item__img"
+              src="./images/icon-play.svg"
+              alt="Play Icon"
+            />
+          </figure>
+          <div class="item-info">
+            <div class="info__actividad">
+              <h3 class="actividad__title">Play</h3>
+              <img
+                class="icon-ellipsis"
+                src="./images/icon-ellipsis.svg"
+                alt="Ellipsis Icon"
+              />
+            </div>
+            <div class="info-date">
+              <p class="info__time"><span class="hrs-current">10</span>hrs</p>
+              <p class="info__previous">
+                Last Week - <span class="hrs-previus">8</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card Study -->
+        <div class="card-datos__item">
+          <figure class="figure-img">
+            <img
+              class="item__img"
+              src="./images/icon-study.svg"
+              alt="Study Icon"
+            />
+          </figure>
+          <div class="item-info">
+            <div class="info__actividad">
+              <h3 class="actividad__title">Study</h3>
+              <img
+                class="icon-ellipsis"
+                src="./images/icon-ellipsis.svg"
+                alt="Ellipsis Icon"
+              />
+            </div>
+            <div class="info-date">
+              <p class="info__time"><span class="hrs-current">4</span>hrs</p>
+              <p class="info__previous">
+                Last Week - <span class="hrs-previus">7</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card Exercise -->
+        <div class="card-datos__item">
+          <figure class="figure-img">
+            <img
+              class="item__img"
+              src="./images/icon-exercise.svg"
+              alt="exercise Icon"
+            />
+          </figure>
+          <div class="item-info">
+            <div class="info__actividad">
+              <h3 class="actividad__title">Exercise</h3>
+              <img
+                class="icon-ellipsis"
+                src="./images/icon-ellipsis.svg"
+                alt="Ellipsis Icon"
+              />
+            </div>
+            <div class="info-date">
+              <p class="info__time"><span class="hrs-current">4</span>hrs</p>
+              <p class="info__previous">
+                Last Week - <span class="hrs-previus">5</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card Social -->
+        <div class="card-datos__item">
+          <figure class="figure-img">
+            <img
+              class="item__img"
+              src="./images/icon-social.svg"
+              alt="social Icon"
+            />
+          </figure>
+          <div class="item-info">
+            <div class="info__actividad">
+              <h3 class="actividad__title">Social</h3>
+              <img
+                class="icon-ellipsis"
+                src="./images/icon-ellipsis.svg"
+                alt="Ellipsis Icon"
+              />
+            </div>
+            <div class="info-date">
+              <p class="info__time"><span class="hrs-current">4</span>hrs</p>
+              <p class="info__previous">
+                Last Week - <span class="hrs-previus">5</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card Self Care -->
+        <div class="card-datos__item">
+          <figure class="figure-img">
+            <img
+              class="item__img"
+              src="./images/icon-self-care.svg"
+              alt="self-care Icon"
+            />
+          </figure>
+          <div class="item-info">
+            <div class="info__actividad">
+              <h3 class="actividad__title">Self Care</h3>
+              <img
+                class="icon-ellipsis"
+                src="./images/icon-ellipsis.svg"
+                alt="Ellipsis Icon"
+              />
+            </div>
+            <div class="info-date">
+              <p class="info__time"><span class="hrs-current">2</span> hrs</p>
+              <p class="info__previous">
+                Last Week - <span class="hrs-previus">2</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- cierre container -->
+    </div>
+  </body>
+</html>
